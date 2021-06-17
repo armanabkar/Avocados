@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-// MARK: - FACT DATA
-
 let factsData: [Fact] = [
     Fact(
         image: "avocado-fact-1",

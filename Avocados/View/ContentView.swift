@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    // MARK: - PROPERTIES
     
     var headers: [Header] = headersData
     var facts: [Fact] = factsData
@@ -17,8 +16,6 @@ struct ContentView: View {
     var body: some View {
         ScrollView(.vertical, showsIndicators: false) {
             VStack(alignment: .center, spacing: 20) {
-                // MARK: - HEADER
-                
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(alignment: .top, spacing: 0) {
                         ForEach(headers) { item in
@@ -27,16 +24,12 @@ struct ContentView: View {
                     }
                 }
                 
-                // MARK: - DISHES
-                
                 Text("Avocado Dishes")
                     .fontWeight(.bold)
                     .modifier(TitleModifier())
                 
                 DishesView()
                     .frame(maxWidth: 640)
-                
-                // MARK: - AVOCADO FACTS
                 
                 Text("Avocado Facts")
                     .fontWeight(.bold)
@@ -53,8 +46,6 @@ struct ContentView: View {
                     .padding(.trailing, 20)
                 }
                 
-                // MARK: - RECIPE CARDS
-                
                 Text("Avocado Recipes")
                     .fontWeight(.bold)
                     .modifier(TitleModifier())
@@ -66,8 +57,6 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: 640)
                 .padding(.horizontal)
-                
-                // MARK: - FOOTER
                 
                 VStack(alignment: .center, spacing: 20) {
                     Text("All About Avocados")
